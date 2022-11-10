@@ -1,23 +1,29 @@
 import { Prop, getModelForClass } from "@typegoose/typegoose";
 
 class VideoGame{
-    @Prop()
+    @Prop({required: true})
     id: number
 
-    @Prop()
+    @Prop({required: true})
     name: string
 
-    @Prop()
+    @Prop({required: true})
     description: string
 
-    @Prop()
+    @Prop({required: true})
     fecha: string
 
-    @Prop()
+    @Prop({required: true})
     rating: number
 
-    @Prop()
+    @Prop({required: true})
     plataformas : string[] 
+
+    @Prop({required: true})
+    generos : string[] 
+
+    @Prop({required: true})
+    img : string 
 }
 const VideoGameModel= getModelForClass(VideoGame)
 export default VideoGameModel

@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import server from './app'
+import server from './src/app'
 require('dotenv').config()
 
 const port = 10000

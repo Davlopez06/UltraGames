@@ -1,2 +1,16 @@
 "use strict";
-console.log("Hellow word");
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const mongoose_1 = __importDefault(require("mongoose"));
+const app_1 = __importDefault(require("./src/app"));
+require('dotenv').config();
+const port = 10000;
+mongoose_1.default
+    .connect(process.env.MONGODB_URI || "")
+    .then(() => console.log("Connected to Database UltraGames"))
+    .catch((error) => console.log(error));
+app_1.default.listen(port, () => {
+    console.log("Server listening in port", port);
+});
