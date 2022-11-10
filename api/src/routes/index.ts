@@ -1,5 +1,6 @@
 import { Router } from 'express'
-import { getGameDetail, getGames, postGame} from '../controllers/VideoGames'
+import { getTypes } from '../controllers/Types'
+import { deleteGames, getGameDetail, getGames, postGame} from '../controllers/VideoGames'
 const router = Router()
 
 router.get("/", (req,res)=>{
@@ -9,6 +10,8 @@ router.get("/", (req,res)=>{
 router.get("/games", getGames)
 router.get("/games/:id", getGameDetail )
 router.post("/games", postGame)
+router.delete("/games/:id", deleteGames )
+router.get("/types", getTypes )
 
 
 export default router 

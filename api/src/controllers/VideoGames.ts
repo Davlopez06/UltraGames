@@ -53,3 +53,15 @@ export const postGame = async(req:any,res:any) =>{
         return res.status(404).json({error:error})
     }
 }
+
+export const deleteGames= async(req:any,res:any)=>{
+    const { id } = req.params;
+
+    try {
+        if(!id)return res.send("No ID was sent.")
+        await VideoGameModel.findByIdAndDelete(id)
+        return res.status(200).json({success:"Your pokemon was deleted successfully."})
+    } catch (error) {
+        return res.status(404).json({error:error})
+    }
+}
