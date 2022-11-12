@@ -1,0 +1,15 @@
+.filter{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid transparent;
+    margin-top: 4vh;
+}
+
+
+.select{
+    width: 13% !important;
+    margin: 3vw;
+}

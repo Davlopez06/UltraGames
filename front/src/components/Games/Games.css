@@ -1,0 +1,17 @@
+.ro{
+    margin: 3vh !important;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.pagi{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.pa{
+    margin-top: 2vh;
+}
